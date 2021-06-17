@@ -14,6 +14,7 @@ const smallerPrime = (limit) => {
  };
 
 console.log(smallerPrime(10));
+// 2 3 5 7
 
 
 

@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 function palindromeCheck(str) {
 
   let letterCounts = {
@@ -34,7 +36,7 @@ function palindromeCheck(str) {
   let numOfOdds = 0;
   
   for(let letter in letterCounts) {
-    console.log(letterCounts[letter]);
+    // console.log(letterCounts[letter]);
     if(letterCounts[letter] % 2 != 0) {
       numOfOdds++;
     }
@@ -46,4 +48,7 @@ function palindromeCheck(str) {
   }
 }
 
-palindromeCheck('nssnoo')
+assert.strictEqual(typeof palindromeCheck, 'function');
+assert.strictEqual(palindromeCheck.length, 1);
+assert.strictEqual(palindromeCheck('ababzbabzbab'), true);
+assert.strictEqual(palindromeCheck('zae'), false);
